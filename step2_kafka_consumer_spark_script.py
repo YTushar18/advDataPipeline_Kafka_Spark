@@ -6,17 +6,12 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col
 from pyspark.sql.types import StructType, StructField, StringType
 
-# Spark session
-# spark = SparkSession.builder.appName("MarketDataProcessor").getOrCreate()
-
-from pyspark.sql import SparkSession
-
 # Create a Spark session with the Kafka package
 spark = SparkSession.builder \
     .appName("MarketDataProcessor") \
     .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2") \
+    .config("spark.sql.shuffle.partitions", "2") \
     .getOrCreate()
-
 
 # Define the schema for the incoming JSON data
 schema = StructType([
@@ -40,8 +35,21 @@ json_stream = raw_stream.selectExpr("CAST(value AS STRING)").select(from_json("v
 # Perform further processing as needed
 processed_stream = json_stream.select("data.*")
 
-# Output the processed data (you can modify this based on your requirements)
-query = processed_stream.writeStream.outputMode("append").format("console").start()
+# Define the query sink and checkpoint location
+checkpoint_dir = "/Users/dhrutipatel/AdvancedDB/advDataPipeline_Kafka_Spark/checkpoint"  # Specify your checkpoint directory
+output_mode = "append"  # Change to "complete" or "update" if needed
+output_sink = "console"  # Change to "parquet", "jdbc", etc., for other sinks
 
-# Start the streaming query
-query.awaitTermination()
+# Output the processed data (you can modify this based on your requirements)
+query = processed_stream.writeStream \
+    .outputMode(output_mode) \
+    .option("checkpointLocation", checkpoint_dir) \
+    .format(output_sink) \
+    .start()
+
+# Await termination of the query
+try:
+    query.awaitTermination()
+except KeyboardInterrupt:
+    # Stop the streaming query gracefully
+    query.stop()
