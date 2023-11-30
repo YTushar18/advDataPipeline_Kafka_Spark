@@ -2,7 +2,7 @@
 base_url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=demo'
 
 # Alpha Vantage API key
-api_key = "PNVFVX2J7SFRHYDE"
+api_key = "Q2XTMKBHNQ9OJFND"
 
 list_of_stocks = ["IBM", "AAPL", "MSFT", "GOOGL", "NVDA", "META"]
 
