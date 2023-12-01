@@ -37,4 +37,8 @@ def capture_data(symbol):
         logging.error(f"JSON decode error: {e}")
 
 # Example usage
-capture_data('AAPL')
+if __name__ == "__main__":
+    # Extend this to loop over multiple symbols or read from a config/source
+    symbols = config.list_of_stocks  # Example list of symbols
+    for symbol in symbols:
+        capture_data(symbol)

@@ -44,7 +44,8 @@ def main():
             # Decode the message value and process the message
             try:
                 message_value = json.loads(msg.value().decode('utf-8'))
-                process_message(message_value)
+                print(message_value)
+                # process_message(message_value)
             except json.JSONDecodeError as e:
                 logging.error(f"JSON Decode Error: {e}")
     
