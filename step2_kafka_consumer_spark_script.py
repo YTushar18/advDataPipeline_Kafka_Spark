@@ -56,7 +56,6 @@ query = parsed_df \
     .queryName("my_table") \
     .start()
 
-
 # Wait for the streaming query to start
 query.awaitTermination(10)
 

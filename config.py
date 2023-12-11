@@ -18,4 +18,3 @@ account_key = '' # Account key
 
 # Name of the container in Azure Blob Storage
 container_name = 'market-historical-data'
-

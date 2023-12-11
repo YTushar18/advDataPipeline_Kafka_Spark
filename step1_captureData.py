@@ -1,4 +1,6 @@
 import json
+import pandas as pd
+import time
 import requests
 import logging
 from confluent_kafka import Producer, KafkaError
@@ -87,8 +89,26 @@ def fetch_and_produce(symbol):
     except json.JSONDecodeError as e:
         logging.error(f"JSON Decode Error: {e}")
 
+
+    # Uploading to Cloud Storage
+
+    # Create a BlobServiceClient
+    blob_service_client = BlobServiceClient(account_url=f'https://{config.account_name}.blob.core.windows.net', credential=config.account_key)
+    # Get a reference to the container
+    container_client = blob_service_client.get_container_client(config.container_name)
+    current_timestamp = time.strftime("%Y%m%d-%H%M%S")
+    # Remote path (blob name) where the file will be stored in the Azure Blob Storage container
+    remote_file_path = f'raw_market-data/{current_timestamp}-MSFT.json'
+    # Convert the dictionary to a JSON-formatted string
+    json_data = json.dumps(newdict)
+    # Upload the JSON string to Azure Blob Storage
+    container_client.upload_blob(name=remote_file_path, data=json_data, content_settings=ContentSettings(content_type='application/json'))
+    
+    # Example log messages
+    # logging.info(f'executed at {current_timestamp}')
+
 if __name__ == "__main__":
     # Extend this to loop over multiple symbols or read from a config/source
     # Right now, fecting the data of AAPL Only
     symbols = "AAPL"
-    fetch_and_produce(symbols)       
+    fetch_and_produce(symbols)

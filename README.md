@@ -22,10 +22,3 @@ Feel free to [open an issue](https://github.com/YTushar18/). We'll be glad to he
 ## Developers
 1. [Dhruti Patel](https://github.com/iamdhrutipatel)
 2. [Tushar Yadav](https://github.com/YTushar18)
-
-
-
-
-
-
-
