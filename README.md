@@ -1,6 +1,8 @@
 # Adv Database Project
 
-
+# Team Members
+  1. Tushar Yadav
+  2. Dhruti Dilipbhai Patel
 
 # Setting up the environment
 
