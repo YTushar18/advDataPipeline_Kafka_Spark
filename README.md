@@ -11,21 +11,14 @@ Real-time analysis involves the scrutiny of current market conditions to facilit
 Alpha Vantage Realtime Market Dataset is a valuable resource for investors and financial analysts seeking up-to-the-minute insights into global financial markets. Alpha Vantage, a prominent financial data provider, offers a real-time market dataset that covers a diverse range of financial instruments, including stocks, indices, and cryptocurrencies.
 
 # Architecture
-
+![Screenshot 2023-12-10 at 8 57 27 PM](https://github.com/YTushar18/advDataPipeline_Kafka_Spark/assets/58872872/b0a4de8f-1ed2-4f1f-ab93-32dfe9066580)
 
 # Getting Started
-Steps to Run the application can be found in this [report]().
+Steps to Run the application can be found in this [report](Advance Database Report-Tushar, Dhruti.pdf).
 
 ## Facing any issues???
-Feel free to [open an issue](https://github.com/YTushar18/). We'll be glad to help you. ❤️
+Feel free to [open an issue]([https://github.com/YTushar18/](https://github.com/YTushar18/advDataPipeline_Kafka_Spark/issues)). We'll be glad to help you. ❤️
 
 ## Developers
 1. [Dhruti Patel](https://github.com/iamdhrutipatel)
 2. [Tushar Yadav](https://github.com/YTushar18)
-
-
-
-
-
-
-
