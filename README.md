@@ -14,7 +14,7 @@ Alpha Vantage Realtime Market Dataset is a valuable resource for investors and f
 ![Screenshot 2023-12-10 at 8 57 27 PM](https://github.com/YTushar18/advDataPipeline_Kafka_Spark/assets/58872872/b0a4de8f-1ed2-4f1f-ab93-32dfe9066580)
 
 # Getting Started
-Steps to Run the application can be found in this [report](Advance Database Report-Tushar, Dhruti.pdf).
+Steps to Run the application can be found in this [report]((https://github.com/YTushar18/advDataPipeline_Kafka_Spark/blob/cee3a28c14304e5528c4378db7a153ca7b3fcd0d/Advance%20Database%20Report-Tushar%2C%20Dhruti.pdf)).
 
 ## Facing any issues???
 Feel free to [open an issue]([https://github.com/YTushar18/](https://github.com/YTushar18/advDataPipeline_Kafka_Spark/issues)). We'll be glad to help you. ❤️
