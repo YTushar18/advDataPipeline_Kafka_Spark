@@ -36,8 +36,11 @@ Kafka is a distributed event streaming platform that lets you read, write, store
 Example events are payment transactions, geolocation updates from mobile phones, shipping orders, sensor measurements from IoT devices or medical equipment, and much more. These events are organized and stored in topics. Very simplified, a topic is similar to a folder in a filesystem, and the events are the files in that folder.
 
 So before you can write your first events, you must create a topic. Open another terminal session and run:
-
 $ bin/kafka-topics.sh --create --topic marketdata --bootstrap-server localhost:9092
+
+# LIST KAFKA TOPICS
+
+bin/kafka-topics.sh --bootstrap-server=localhost:9092 --list
 
 # Run Python Scripts
 
@@ -45,10 +48,3 @@ $ bin/kafka-topics.sh --create --topic marketdata --bootstrap-server localhost:9
 2. Run step1_captureData.py in one ternimals to capture data from API and send it to kafka topic
 3. Run step2_kafka_consumer_spark_script.py to get data from Kafka into spark and perform analysis.
 4. You can run step2_kafka_consumer_py_script.py in another seperate terminal to debug the data coming from kafka
-
-
-
-
-
-
-
