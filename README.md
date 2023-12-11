@@ -1,48 +1,27 @@
-# Adv Database Project
+# Market Data Analysis - Adv Database Project
+
+# Problem Statement
+Analyzing Market Data from Alpha Vantage API for Investment Insights 
+
+In the dynamic landscape of financial markets, the vast and continuous flow of data presents a valuable opportunity for making data-driven investment decisions. The objective of this advanced database project is to harness the wealth of historical and real-time market data to empower investors with sophisticated tools for both real-time analysis and predictive analysis of the market. 
+
+Real-time analysis involves the scrutiny of current market conditions to facilitate immediate decision-making. This phase of the project will focus on developing mechanisms to monitor livestock prices, track market indices, and respond promptly to emerging events or news that can influence financial markets. 
+
+# Data Description
+Alpha Vantage Realtime Market Dataset is a valuable resource for investors and financial analysts seeking up-to-the-minute insights into global financial markets. Alpha Vantage, a prominent financial data provider, offers a real-time market dataset that covers a diverse range of financial instruments, including stocks, indices, and cryptocurrencies.
+
+# Architecture
 
 
+# Getting Started
+Steps to Run the application can be found in this [report]().
 
-# Setting up the environment
+## Facing any issues???
+Feel free to [open an issue](https://github.com/YTushar18/). We'll be glad to help you. ❤️
 
-1. Install latest Java on your mac 
-2. Install Apache Kafka (https://medium.com/@Ankitthakur/apache-kafka-installation-on-mac-using-homebrew-a367cdefd273)
-3. Install Apache Spark (https://sparkbyexamples.com/spark/install-apache-spark-on-mac/)
-4. Install python 3.7 or later
-5. Install Dependencies using pip - python3 -m pip install -r requirements.txt
-
-# Starting kafka server
-
-START THE KAFKA ENVIRONMENT
-NOTE: Your local environment must have Java 8+ installed.
-
-Apache Kafka can be started using ZooKeeper or KRaft. To get started with either configuration follow one the sections below but not both.
-
-Kafka with ZooKeeper
-Run the following commands in order to start all services in the correct order:
-
-# Start the ZooKeeper service
-$ bin/zookeeper-server-start.sh config/zookeeper.properties
-Open another terminal session and run:
-
-# Start the Kafka broker service
-$ bin/kafka-server-start.sh config/server.properties
-Once all services have successfully launched, you will have a basic Kafka environment running and ready to use.
-
-# CREATE A TOPIC TO STORE YOUR EVENTS
-Kafka is a distributed event streaming platform that lets you read, write, store, and process events (also called records or messages in the documentation) across many machines.
-
-Example events are payment transactions, geolocation updates from mobile phones, shipping orders, sensor measurements from IoT devices or medical equipment, and much more. These events are organized and stored in topics. Very simplified, a topic is similar to a folder in a filesystem, and the events are the files in that folder.
-
-So before you can write your first events, you must create a topic. Open another terminal session and run:
-
-$ bin/kafka-topics.sh --create --topic marketdata --bootstrap-server localhost:9092
-
-# Run Python Scripts
-
-1. open 2 seperate new terminals
-2. Run step1_captureData.py in one ternimals to capture data from API and send it to kafka topic
-3. Run step2_kafka_consumer_spark_script.py to get data from Kafka into spark and perform analysis.
-4. You can run step2_kafka_consumer_py_script.py in another seperate terminal to debug the data coming from kafka
+## Developers
+1. [Dhruti Patel](https://github.com/iamdhrutipatel)
+2. [Tushar Yadav](https://github.com/YTushar18)
 
 
 
