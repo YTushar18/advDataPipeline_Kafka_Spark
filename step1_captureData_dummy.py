@@ -1,5 +1,4 @@
 # Example File to Capture the Dummy Data
-
 import requests
 import json
 import os
